@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Desousak.github.io/static/css/main.abbed4fb.chunk.css",
+    "main.js": "/Desousak.github.io/static/js/main.8acb8f14.chunk.js",
+    "main.js.map": "/Desousak.github.io/static/js/main.8acb8f14.chunk.js.map",
+    "runtime-main.js": "/Desousak.github.io/static/js/runtime-main.67ab5fae.js",
+    "runtime-main.js.map": "/Desousak.github.io/static/js/runtime-main.67ab5fae.js.map",
+    "static/js/2.118ce22b.chunk.js": "/Desousak.github.io/static/js/2.118ce22b.chunk.js",
+    "static/js/2.118ce22b.chunk.js.map": "/Desousak.github.io/static/js/2.118ce22b.chunk.js.map",
+    "index.html": "/Desousak.github.io/index.html",
+    "precache-manifest.249ddeb0b39431cdd690c2aea796c9dc.js": "/Desousak.github.io/precache-manifest.249ddeb0b39431cdd690c2aea796c9dc.js",
+    "service-worker.js": "/Desousak.github.io/service-worker.js",
+    "static/css/main.abbed4fb.chunk.css.map": "/Desousak.github.io/static/css/main.abbed4fb.chunk.css.map",
+    "static/js/2.118ce22b.chunk.js.LICENSE.txt": "/Desousak.github.io/static/js/2.118ce22b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.67ab5fae.js",
+    "static/js/2.118ce22b.chunk.js",
+    "static/css/main.abbed4fb.chunk.css",
+    "static/js/main.8acb8f14.chunk.js"
+  ]
+}
