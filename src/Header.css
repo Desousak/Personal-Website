@@ -1,0 +1,25 @@
+header {
+    /* width: 100%; */
+    display: grid;
+    grid-template-columns: 35% auto;
+    align-items: center;
+    gap: 1em;
+}
+
+.Name {
+    font-weight: 800;
+    margin: 0;
+}
+
+.Bio {
+    font-weight: 600;
+}
+
+.Social {
+    margin-top: 10px;
+}
+
+.Social > a {
+    margin: 0 10px 0 0;
+    color: var(--foreground-color);
+}
