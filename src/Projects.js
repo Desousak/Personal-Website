@@ -7,11 +7,14 @@ export default class Projects extends React.Component {
     constructor(props) {
         super(props);
         this.project_ele = createRef(null); // Used to add and remove event listeners
-
-        // Used to change the scroll rate 
-        this.screen_ratio = window.screen.width / window.screen.height;
         this.state = { offsetX: 0, icon: "Grab-stop", animate: "" };
-        this.scroll_limits = { min: 0, max: -522 };
+
+        // Used to calculate the movementX variable (not available on some devices)
+        this.past_event = null;
+
+        // Set the bounds for the cards
+        this.scroll_limits = { min: 0, max: -1 };
+        this.updateBounds();
 
         // If the window resizes and the scrollbar is moved out of bounds, fix it 
         window.addEventListener('resize', _ => {
@@ -21,14 +24,27 @@ export default class Projects extends React.Component {
     }
 
     updateBounds = _ => {
-        // Get the max scroll area
-        let max_card_size = 1545;
-        let page_width = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--page-width"), 10);
-        this.scroll_limits.max = -1 * (max_card_size - page_width);
+        // Get the size needed for all elements scroll area
+        let card_size = 315;
+        let card_amnt = 5;
+        let card_space = card_size * card_amnt;
+
+        // Get the available page width 
+        let page_width_string = getComputedStyle(document.documentElement).getPropertyValue("--page-width");
+        let page_width;
+
+        // Calculate the width if the style has a percent
+        if (page_width_string.includes("%")) {
+            page_width = window.innerWidth * (parseInt(page_width_string, 10) / 100);
+        } else {
+            page_width = parseInt(page_width_string, 10);
+        }
+
+        // Set the scroll limit
+        this.scroll_limits.max = -1 * (card_space - (page_width));
     }
 
     startScroll = _ => {
-        this.updateBounds();
         this.project_ele.current.addEventListener("pointermove", this.handleScroll);
         this.setState({ icon: "Grab-start", animate: "" });
     }
@@ -49,13 +65,18 @@ export default class Projects extends React.Component {
 
     stopScroll = _ => {
         this.fixScroll();
+        this.past_event = null;
         this.project_ele.current.removeEventListener("pointermove", this.handleScroll);
         this.setState({ icon: "Grab-stop" });
     }
 
     handleScroll = (event) => {
-        let new_offset = this.state.offsetX + (event.movementX / this.screen_ratio);
-        this.setState({ offsetX: new_offset });
+        if (this.past_event != null) {
+            let movementX = event.clientX - this.past_event.clientX;
+            let new_offset = this.state.offsetX + movementX;
+            this.setState({ offsetX: new_offset });
+        }
+        this.past_event = event;
     }
 
     manualScroll = (amount) => {

@@ -12,10 +12,6 @@ export default class Card extends React.Component {
         return card_style;
     }
 
-    getLink() {
-        
-    }
-
     getCard() {
         return <button className="Card" style={this.getStyle()}>
             <h2 className="Card-title">{this.props.title}</h2>
