@@ -10,6 +10,7 @@ class Carousel extends React.Component {
 
     componentDidMount() {
         window.addEventListener("mousewheel", (e) => this._handleScroll(e));
+        window.addEventListener("resize", _ => this.scrollToPage(this.state.pagePos));
         this._setPage(this._getPage());
     }
 
