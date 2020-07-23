@@ -1,15 +1,16 @@
 import React from 'react';
 import './App.css';
-import Header from './Header.js';
-import Projects from './Projects.js';
-import Extras from './Extras.js';
+import Carousel from "./Carousel.js";
+import Page from './Page.js';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Projects />
-      <Extras />
+    <div id="app">
+      <Carousel>
+        <Page/>
+        <Page/>
+        <Page/>
+      </Carousel>
     </div>
   );
 }
