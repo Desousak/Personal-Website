@@ -1,4 +1,10 @@
 .Page {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+}
+
+.Remove {
+    -webkit-animation: fadeOut 500ms;
+    -moz-animation: fadeOut 500ms;
+    animation: fadeOut 500ms;
 }
