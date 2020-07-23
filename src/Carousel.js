@@ -57,13 +57,18 @@ class Carousel extends React.Component {
     }
 
     render() {
+        // Get the amount of children 
+        let childrenAmnt = 0;
+        React.Children.forEach(this.props.children, _ => {
+            childrenAmnt ++;
+        })
         return (
             <div id="Carousel">
                 <div id="Carousel-Pages">
                     {this.props.children}
                 </div>
                 <PageIndicator ref={this._PageIndicator}
-                    carousel={this} init={0} amnt={this.props.children.length} />
+                    carousel={this} init={0} amnt={childrenAmnt} />
             </div>
         );
     }
