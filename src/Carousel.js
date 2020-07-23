@@ -28,11 +28,11 @@ class Carousel extends React.Component {
     _handleScroll(e) {
         // Get scroll direction and scroll to that page
         let dir = e.deltaY / Math.abs(e.deltaY);
-        this._scrollToPage(this.state.pagePos + dir);
+        this.scrollToPage(this.state.pagePos + dir);
     }
 
     // Scroll to a page (will update the current-page counter)
-    _scrollToPage(index) {
+    scrollToPage(index) {
         let pages = document.querySelectorAll("#Carousel-Pages > *");
         if (index >= 0 && index < pages.length) {
             // Get the desired page location and scroll to it 
@@ -62,7 +62,7 @@ class Carousel extends React.Component {
                     {this.props.children}
                 </div>
                 <PageIndicator ref={this._PageIndicator}
-                    init={0} amnt={this.props.children.length} />
+                    carousel={this} init={0} amnt={this.props.children.length} />
             </div>
         );
     }
