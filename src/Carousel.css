@@ -1,12 +1,16 @@
 #Carousel {
+    --horz-padding: 300px;
+    --vert-padding: 75px;
+    
     background-color: var(--background-color);
     color: var(--foreground-color);
 }
 
 #Carousel-Pages > * {
-    padding: var(--vert-padding)
-             var(--horz-padding)
-             var(--vert-padding)
-             var(--horz-padding);
+    padding: var(--vert-padding) var(--horz-padding);
     height: calc( 100vh - (var(--vert-padding) * 2));
+}
+
+body {
+    overflow: hidden;
 }

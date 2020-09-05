@@ -1,35 +1,38 @@
 import React from 'react';
-import './Carousel.css';
 import PageIndicator from './PageIndicator.js';
+import Page from './Page.js';
+import './Carousel.css';
 
 class Carousel extends React.Component {
     constructor(props) {
         super();
         this._PageIndicator = React.createRef();
+        this.state = {
+            children: this._wrapChildren(props.children)
+        }
     }
 
     componentDidMount() {
+        // A variable used to stop the scrolling of pages
+        this.stopScroll = false;
         window.addEventListener("mousewheel", (e) => this._handleScroll(e));
         window.addEventListener("resize", _ => this.scrollToPage(this.state.pagePos));
         this._setPage(this._getPage());
     }
 
-    // Get the page the user is currently on (useful when reloading the page)
-    _getPage() {
-        let pages = document.querySelectorAll("#Carousel-Pages > *");
-        let index = 0;
-        for (let page of pages) {
-            let pageTop = page.getBoundingClientRect().top;
-            if (pageTop === 0) return index;
-            index += 1;
-        }
-    }
-
     // Change current page
     _handleScroll(e) {
         // Get scroll direction and scroll to that page
-        let dir = e.deltaY / Math.abs(e.deltaY);
-        this.scrollToPage(this.state.pagePos + dir);
+        let dir = ((e.deltaY !== -0) ? e.deltaY / Math.abs(e.deltaY) : 0);
+        if (!this.stopScroll) {
+            this.scrollToPage(this.state.pagePos + dir);
+
+            // Toggle the page scroll
+            this.stopScroll = true;
+            setTimeout(_ => {
+                this.stopScroll = false;
+            }, 100)
+        }
     }
 
     // Scroll to a page (will update the current-page counter)
@@ -49,6 +52,17 @@ class Carousel extends React.Component {
         }
     }
 
+    // Get the page the user is currently on (useful when reloading the page)
+    _getPage() {
+        let pages = document.querySelectorAll("#Carousel-Pages > *");
+        let index = 0;
+        for (let page of pages) {
+            let pageTop = page.getBoundingClientRect().top;
+            if (pageTop === 0) return index;
+            index += 1;
+        }
+    }
+
     // Manually update the page counter
     _setPage(index) {
         // Remember the current page index and change the indicator
@@ -56,19 +70,24 @@ class Carousel extends React.Component {
         this._PageIndicator.current.setIndicator(index);
     }
 
-    render() {
-        // Get the amount of children 
-        let childrenAmnt = 0;
-        React.Children.forEach(this.props.children, _ => {
-            childrenAmnt ++;
+
+    // Wrap each child in a page element
+    _wrapChildren(children) {
+        let tmp = [];
+        React.Children.forEach(children, e => {
+            tmp.push(<Page>{e}</Page>);
         })
+        return tmp;
+    }
+
+    render() {
         return (
             <div id="Carousel">
                 <div id="Carousel-Pages">
-                    {this.props.children}
+                    {this.state.children}
                 </div>
                 <PageIndicator ref={this._PageIndicator}
-                    carousel={this} init={0} amnt={childrenAmnt} />
+                    carousel={this} init={0} amnt={this.state.children.length} />
             </div>
         );
     }
