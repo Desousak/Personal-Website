@@ -6,23 +6,24 @@
 
     display: flex;
     flex-direction: column;
-    gap: 1rem;
 }
 
-.Page-Val {
+a.Page-Val {
     /* Custom page-indicator style */
     border: 1px solid var(--foreground-color);
 	border-radius: 50%;
 	width: 0.5rem;
     height: 0.5rem;
 
+    margin: 7px 0;
+
     transition: all 0.35s ease-in-out;
 }
 
-.Page-Val:hover {
+a.Page-Val:hover {
     cursor: pointer;
 }
 
-.Page-Filled {
+a.Page-Filled {
     background-color: white;
 }

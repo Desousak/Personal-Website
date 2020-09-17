@@ -17,7 +17,7 @@ class Carousel extends React.Component {
         this.stopScroll = false;
         window.addEventListener("mousewheel", (e) => this._handleScroll(e));
         window.addEventListener("resize", _ => this.scrollToPage(this.state.pagePos));
-        this._setPage(this._getPage());
+        this._setPageIndex(this._getPageIndex());
     }
 
     // Change current page
@@ -31,7 +31,7 @@ class Carousel extends React.Component {
             this.stopScroll = true;
             setTimeout(_ => {
                 this.stopScroll = false;
-            }, 100)
+            }, 500);
         }
     }
 
@@ -39,21 +39,17 @@ class Carousel extends React.Component {
     scrollToPage(index) {
         let pages = document.querySelectorAll("#Carousel-Pages > *");
         if (index >= 0 && index < pages.length) {
-            // Get the desired page location and scroll to it 
+            // Get the desired page and scroll to it 
             let page = pages[index];
-            let pageTop = page.getBoundingClientRect().top + window.scrollY;
-
-            window.scrollTo({
-                top: pageTop,
-                left: 0,
+            page.scrollIntoView({
                 behavior: 'smooth'
             });
-            this._setPage(index);
+            this._setPageIndex(index);
         }
     }
 
     // Get the page the user is currently on (useful when reloading the page)
-    _getPage() {
+    _getPageIndex() {
         let pages = document.querySelectorAll("#Carousel-Pages > *");
         let index = 0;
         for (let page of pages) {
@@ -64,7 +60,7 @@ class Carousel extends React.Component {
     }
 
     // Manually update the page counter
-    _setPage(index) {
+    _setPageIndex(index) {
         // Remember the current page index and change the indicator
         this.setState({ pagePos: index });
         this._PageIndicator.current.setIndicator(index);
