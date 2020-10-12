@@ -1,22 +1,25 @@
 {
   "files": {
-    "main.css": "/Personal-Website/static/css/main.69cca164.chunk.css",
-    "main.js": "/Personal-Website/static/js/main.faac7737.chunk.js",
-    "main.js.map": "/Personal-Website/static/js/main.faac7737.chunk.js.map",
-    "runtime-main.js": "/Personal-Website/static/js/runtime-main.99bc0668.js",
-    "runtime-main.js.map": "/Personal-Website/static/js/runtime-main.99bc0668.js.map",
-    "static/js/2.118ce22b.chunk.js": "/Personal-Website/static/js/2.118ce22b.chunk.js",
-    "static/js/2.118ce22b.chunk.js.map": "/Personal-Website/static/js/2.118ce22b.chunk.js.map",
-    "index.html": "/Personal-Website/index.html",
-    "precache-manifest.2dc6c92d4c6b0d1776125f2f070bed51.js": "/Personal-Website/precache-manifest.2dc6c92d4c6b0d1776125f2f070bed51.js",
-    "service-worker.js": "/Personal-Website/service-worker.js",
-    "static/css/main.69cca164.chunk.css.map": "/Personal-Website/static/css/main.69cca164.chunk.css.map",
-    "static/js/2.118ce22b.chunk.js.LICENSE.txt": "/Personal-Website/static/js/2.118ce22b.chunk.js.LICENSE.txt"
+    "main.css": "/Desousak.github.io/static/css/main.039b0940.chunk.css",
+    "main.js": "/Desousak.github.io/static/js/main.0f77c58a.chunk.js",
+    "main.js.map": "/Desousak.github.io/static/js/main.0f77c58a.chunk.js.map",
+    "runtime-main.js": "/Desousak.github.io/static/js/runtime-main.227a71b0.js",
+    "runtime-main.js.map": "/Desousak.github.io/static/js/runtime-main.227a71b0.js.map",
+    "static/css/2.eb43dee1.chunk.css": "/Desousak.github.io/static/css/2.eb43dee1.chunk.css",
+    "static/js/2.706318fe.chunk.js": "/Desousak.github.io/static/js/2.706318fe.chunk.js",
+    "static/js/2.706318fe.chunk.js.map": "/Desousak.github.io/static/js/2.706318fe.chunk.js.map",
+    "index.html": "/Desousak.github.io/index.html",
+    "precache-manifest.ea08b70a1a64fae0615926cb2bd30590.js": "/Desousak.github.io/precache-manifest.ea08b70a1a64fae0615926cb2bd30590.js",
+    "service-worker.js": "/Desousak.github.io/service-worker.js",
+    "static/css/2.eb43dee1.chunk.css.map": "/Desousak.github.io/static/css/2.eb43dee1.chunk.css.map",
+    "static/css/main.039b0940.chunk.css.map": "/Desousak.github.io/static/css/main.039b0940.chunk.css.map",
+    "static/js/2.706318fe.chunk.js.LICENSE.txt": "/Desousak.github.io/static/js/2.706318fe.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.99bc0668.js",
-    "static/js/2.118ce22b.chunk.js",
-    "static/css/main.69cca164.chunk.css",
-    "static/js/main.faac7737.chunk.js"
+    "static/js/runtime-main.227a71b0.js",
+    "static/css/2.eb43dee1.chunk.css",
+    "static/js/2.706318fe.chunk.js",
+    "static/css/main.039b0940.chunk.css",
+    "static/js/main.0f77c58a.chunk.js"
   ]
 }
