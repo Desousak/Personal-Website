@@ -1,0 +1,15 @@
+.blinking-cursor {
+    font-weight: 250;
+    font-size: 30px;
+    opacity: 1; 
+}
+
+.blinking-cursor.animate {
+    animation: blink 1.7s step-start infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}  

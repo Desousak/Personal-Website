@@ -1,0 +1,73 @@
+#name-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#personal-info #name, 
+#personal-info #bio {
+    margin: .5rem 0 .5rem;
+}
+
+#personal-info #name {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1.1rem;
+}
+
+#personal-info #bio {
+    width: 600px;
+    line-height: 1.65;
+    font-size: 1.2rem;
+    -webkit-letter-spacing: 0.005rem;
+    -moz-letter-spacing: 0.005rem;
+    -ms-letter-spacing: 0.005rem;
+    letter-spacing: 0.005rem;
+    margin-bottom: 1rem;
+}
+
+#name-card #links {
+    padding: 0;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+}
+
+#name-card #links li {
+    margin-right: 1rem;
+    --anchor-opacity: 0;
+    --anchor-scale: 0.5;
+    --icon-color: var(--foreground-color);
+}
+
+#name-card #links li:hover {
+    --anchor-opacity: 100;
+    --anchor-scale: 1;
+    --icon-color: var(--background-color);
+}
+
+#name-card #links a {
+    display: flex;
+    transition: all 0.25s ease-in-out;
+    color: var(--icon-color);
+    align-items: center;
+    margin-right: 1rem;
+    position: relative;
+    justify-content: center;
+}
+
+#name-card #links svg {
+    z-index: 100;
+}
+
+.anchor-circle {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    position: absolute;
+    transform: scale(var(--anchor-scale));
+    opacity: var(--anchor-opacity);
+    background-color: var(--foreground-color);
+}
