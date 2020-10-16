@@ -1,0 +1,35 @@
+@media only screen and (max-width: 2560px){
+    :root {
+        --side-margin: 10rem;
+    }
+}
+
+@media only screen and (max-width: 1340px){
+    :root {
+        --side-margin: 7rem;
+    }
+}
+
+@media only screen and (max-width: 1250px){
+    :root {
+        --side-margin: 5rem;
+    }
+}
+
+@media only screen and (max-width: 1180px){
+    #links {
+        margin-left: 0 !important;
+    }
+    #links a {
+        margin: 1rem !important;
+    }
+    #links li {
+        margin-right: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    #name-card {
+        flex-wrap: wrap;
+    }
+}

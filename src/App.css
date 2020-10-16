@@ -2,7 +2,7 @@
     --foreground-color: #333333;
     --background-color: white;
     --alt-color: darkgrey;
-    --side-margin: 10rem;
+    --side-margin: 20rem;
 }
 
 @media (prefers-color-scheme: dark) {

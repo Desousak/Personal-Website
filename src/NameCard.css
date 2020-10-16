@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+#personal-info {
+    width: 600px;
+}
+
 #personal-info #name, 
 #personal-info #bio {
     margin: .5rem 0 .5rem;
@@ -16,7 +20,6 @@
 }
 
 #personal-info #bio {
-    width: 600px;
     line-height: 1.65;
     font-size: 1.2rem;
     -webkit-letter-spacing: 0.005rem;
@@ -28,10 +31,11 @@
 
 #name-card #links {
     padding: 0;
-    margin-left: auto;
+    margin: 0 0 0 auto;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     list-style-type: none;
+    justify-content: center;
 }
 
 #name-card #links li {
@@ -52,7 +56,7 @@
     transition: all 0.25s ease-in-out;
     color: var(--icon-color);
     align-items: center;
-    margin-right: 1rem;
+    margin: 0 0 0 1rem;
     position: relative;
     justify-content: center;
 }
