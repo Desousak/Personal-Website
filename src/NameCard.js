@@ -1,6 +1,6 @@
 import React from 'react';
 import TypingText from "./TypingText.js";
-import { FaGithub, FaLinkedin, FaInstagram, FaTwitter, FaEnvelope, FaBriefcase } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, /*FaInstagram, FaTwitter,*/ FaEnvelope, FaBriefcase, FaFilePdf } from 'react-icons/fa';
 import './NameCard.css';
 
 export default class NameCard extends React.Component {
@@ -28,21 +28,21 @@ export default class NameCard extends React.Component {
                             <div className="anchor-circle" />
                         </a>
                     </li>
-                    <li>
+                    {/* <li>
                         <a href="https://www.instagram.com/kevindesousa3/">
                             <FaInstagram size={38} />
                             <div className="anchor-circle" />
                         </a>
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                         <a href="https://twitter.com/KevinDesousa6/">
                             <FaTwitter size={38} />
                             <div className="anchor-circle" />
                         </a>
-                    </li>
+                    </li> */}
                     <li>
-                        <a href="mailto:kevin.desousa1@ontariotechu.net">
-                            <FaEnvelope size={38} />
+                        <a href="">
+                            <FaFilePdf size={38} />
                             <div className="anchor-circle" />
                         </a>
                     </li>
@@ -52,6 +52,13 @@ export default class NameCard extends React.Component {
                             <div className="anchor-circle" />
                         </a>
                     </li>
+                    <li>
+                        <a href="mailto:kevin.desousa1@ontariotechu.net">
+                            <FaEnvelope size={38} />
+                            <div className="anchor-circle" />
+                        </a>
+                    </li>
+                   
                 </ul>
             </div>
         );

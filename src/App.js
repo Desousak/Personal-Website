@@ -8,6 +8,10 @@ import './App.css';
 import './screen-sizes.css'
 
 function App() {
+  // TEMP SOLUTION TODO: REPLACE THIS
+  // Disable the warn messages
+  console.warn = () => {};
+
   return (
     <div id="app">
       <div id="grid-wrapper">
