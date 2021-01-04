@@ -23,7 +23,7 @@ export default class NameCard extends React.Component {
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.linkedin.com/in/kevin-desousa-909989170">
+                        <a href="https://www.linkedin.com/in/kevin-desousa">
                             <FaLinkedin size={38} />
                             <div className="anchor-circle" />
                         </a>
