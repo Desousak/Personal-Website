@@ -4,6 +4,9 @@
 - [React](https://reactjs.org/)
 - [Create React App](https://github.com/facebook/create-react-app)
 - [GH-Pages](https://www.npmjs.com/package/gh-pages)
+- [react-icons](https://www.npmjs.com/package/react-icons)
+- [react-particles-webgl](https://www.npmjs.com/package/react-particles-webgl)
+- [react-page-scroller](https://www.npmjs.com/package/react-page-scroller)
 
 ### To Run:
 1) Clone the repo to your local device
