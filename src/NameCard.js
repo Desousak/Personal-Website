@@ -1,6 +1,6 @@
 import React from 'react';
 import TypingText from "./TypingText.js";
-import { FaGithub, FaLinkedin, /*FaInstagram, FaTwitter,*/ FaEnvelope, FaBriefcase, FaFilePdf } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaBriefcase, FaFilePdf } from 'react-icons/fa';
 import './NameCard.css';
 
 export default class NameCard extends React.Component {

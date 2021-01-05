@@ -1,0 +1,29 @@
+#Page-Indicators {
+    position: fixed;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+}
+
+a.Page-Val {
+    /* Custom page-indicator style */
+    border: 1px solid var(--foreground-color);
+	border-radius: 50%;
+	width: 0.5rem;
+    height: 0.5rem;
+
+    margin: 7px 0;
+
+    transition: all 0.35s ease-in-out;
+}
+
+a.Page-Val:hover {
+    cursor: pointer;
+}
+
+a.Page-Filled {
+    background-color: white;
+}
