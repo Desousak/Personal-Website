@@ -14,11 +14,11 @@
 3) Run the site (`npm start`)
 
 ### Dependencies:
-- aos: 3.0.0-beta.6
 - react: 16.13.1
 - react-dom: 16.13.1
 - react-icons: 3.11.0
 - react-particles-webgl: 1.0.10
+- react-page-scroller: 2.0.11-beta
 - react-scripts: 3.4.3
 - styled-components: 4.4.1
 - three: 0.120.1
