@@ -46,10 +46,3 @@ body {
 #background-wrapper * {
     z-index: 1;
 }
-
-#pagenum-wrapper {
-    right: 20px;
-    top: 50vh;
-    transform: translateY(-50%);
-    position: fixed;
-}

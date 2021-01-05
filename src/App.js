@@ -9,18 +9,7 @@ import ReactPageScroller from 'react-page-scroller';
 import './App.css';
 import './screen-sizes.css'
 
-function getPageNumbers(children) {
-  let pageNumbers = [];
-  for (let i = 1; i <= children.length; i++) {
-    pageNumbers.push(
-      <div>
-        Test
-      </div>
-    );
-  }
-  return [...pageNumbers];
-};
-
+// Handle the different page numbers
 let pageIndicator = React.createRef();
 function handlePageChange(number) {
   pageIndicator.current.setIndicator(number);
@@ -40,9 +29,6 @@ function App() {
           {childContent}
         </ReactPageScroller>
       </div>
-      {/* <div id="pagenum-wrapper">
-        1
-      </div> */}
       <PageIndicator ref={pageIndicator} init={0} amnt={childContent.length} />
       <div id="background-wrapper">
         <Particles />
