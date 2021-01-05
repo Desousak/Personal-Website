@@ -9,20 +9,20 @@ class PageIndicator extends React.Component {
 
     // Set the indicator to a new spot
     setIndicator(index) {
-        if (index >= 0 && index < document.querySelectorAll(".Page-Val").length)
+        if (index >= 0 && index < document.querySelectorAll(".page-val").length)
             this.setState({ activePage: index });
     }
 
     render() {
         let pageIcons = [];
         for (let i = 0; i < this.props.amnt; i++) {
-            let className = i === this.state.activePage ? " , Page-Filled" : "";
-            pageIcons.push(<a className={"Page-Val" + className} 
+            let className = i === this.state.activePage ? " , page-filled" : "";
+            pageIcons.push(<a className={"page-val" + className} 
                             key={i} onClick={_ => this.props.carousel.scrollToPage(i)}></a>)
         }
 
         return (
-            <div id="Page-Indicators">
+            <div id="page-indicators">
                 {pageIcons}
             </div>
         );

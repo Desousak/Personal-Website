@@ -1,4 +1,4 @@
-#Page-Indicators {
+#page-indicators {
     position: fixed;
     right: 1rem;
     top: 50%;
@@ -6,9 +6,10 @@
 
     display: flex;
     flex-direction: column;
+    z-index: 100;
 }
 
-a.Page-Val {
+a.page-val {
     /* Custom page-indicator style */
     border: 1px solid var(--foreground-color);
 	border-radius: 50%;
@@ -20,10 +21,10 @@ a.Page-Val {
     transition: all 0.35s ease-in-out;
 }
 
-a.Page-Val:hover {
+a.page-val:hover {
     cursor: pointer;
 }
 
-a.Page-Filled {
-    background-color: white;
+a.page-filled {
+    background-color: var(--foreground-color);
 }
