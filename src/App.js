@@ -1,5 +1,6 @@
 // Components
 import React from 'react';
+import Project from "./Project.js";
 import NameCard from './NameCard.js';
 import Particles from './Particles.js';
 import PageIndicator from './PageIndicator.js';
@@ -20,8 +21,7 @@ function App() {
   // Disable the warn messages
   console.warn = () => { };
 
-  let childContent = [<NameCard />, <p>Test</p>, <div>p</div>];
-
+  let childContent = [<NameCard />, <Project> <div>Test</div> <div>Test</div> </Project>];
   return (
     <div id="app">
       <div id="scroll-wrapper">

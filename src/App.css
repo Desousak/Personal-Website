@@ -28,11 +28,18 @@ body {
     z-index: 9999;
 }
 
+/* Center the div that controls the scrolling */
 #scroll-wrapper > div > div > * {
     display: flex;
     align-items: center;
     width: auto !important;
+}
+
+/* Keep items in the center of the screen */
+/* Has to be on this object and not the parent in order to not mess with the scrolling */
+#scroll-wrapper > div > div > div > * {
     margin: 0 var(--side-margin);
+    width: 100%;
 }
 
 #background-wrapper {
