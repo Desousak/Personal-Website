@@ -41,13 +41,13 @@
     margin-right: 1rem;
     --anchor-opacity: 0;
     --anchor-scale: 0.5;
-    --icon-color: var(--foreground-color);
+    --icon-color: rgb(var(--foreground-color));
 }
 
 #name-card #links li:hover {
     --anchor-opacity: 100;
     --anchor-scale: 1;
-    --icon-color: var(--background-color);
+    --icon-color: rgb(var(--background-color));
 }
 
 #name-card #links a {
@@ -72,5 +72,5 @@
     position: absolute;
     transform: scale(var(--anchor-scale));
     opacity: var(--anchor-opacity);
-    background-color: var(--foreground-color);
+    background-color: rgb(var(--foreground-color));
 }

@@ -9,6 +9,8 @@ class Project extends React.Component {
     render() {
         return (
             <div className="project">
+                <img className="project-banner" src={this.props.imageUrl}/>
+                <div className="project-desc">{this.props.projectDesc}</div>
                 {this.props.children}
             </div>
         );

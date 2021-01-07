@@ -1,15 +1,15 @@
 :root {
-    --foreground-color: #333333;
-    --background-color: white;
-    --alt-color: darkgrey;
+    --foreground-color: 51,51,51;
+    --background-color: 255,255,255;
+    --alt-color: 169,169,169;
     --side-margin: 20rem;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --foreground-color: white;
-        --background-color: #333333;
-        --alt-color: darkgrey;
+        --foreground-color: 255,255,255;
+        --background-color: 51,51,51;
+        --alt-color: 169,169,169;
     }
 }
 
@@ -19,8 +19,8 @@ body {
     font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 
     /* Set colors */
-    background-color: var(--background-color);
-    color: var(--foreground-color);
+    background-color: rgb(var(--background-color));
+    color: rgb(var(--foreground-color));
 }
 
 #scroll-wrapper {

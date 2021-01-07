@@ -11,7 +11,7 @@
 
 a.page-val {
     /* Custom page-indicator style */
-    border: 1px solid var(--foreground-color);
+    border: 1px solid rgb(var(--foreground-color));
 	border-radius: 50%;
 	width: 0.5rem;
     height: 0.5rem;
@@ -26,5 +26,5 @@ a.page-val:hover {
 }
 
 a.page-filled {
-    background-color: var(--foreground-color);
+    background-color: rgb(var(--foreground-color));
 }
