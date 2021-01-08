@@ -1,6 +1,5 @@
 // Components
 import React from 'react';
-import Page from "./Page.js";
 import Project from "./Project.js";
 import NameCard from './NameCard.js';
 import Particles from './Particles.js';
@@ -9,6 +8,8 @@ import ReactPageScroller from 'react-page-scroller';
 
 // Images
 import eruditProject from "./img/erudit.vialab.ca.png";
+import citationGalaxies from "./img/Citation Galaxies.png";
+import svgPenSketch from "./img/svg-pen-sketch.png";
 
 // Style sheets
 import './App.css';
@@ -28,8 +29,8 @@ function App() {
 
   // The content to fill within the app, each entry is treated as a page
   let content = [
-    <NameCard className="page-grid" />,
-    <Project className="page-grid"
+    <NameCard key="page-1" className="page-grid" />,
+    <Project key="page-2" className="page-grid"
       imageUrl={eruditProject}
       projectDesc={"The landing page for the various projects created as a part of the CO.SHS project"}
       projectLinks={[
@@ -42,9 +43,36 @@ function App() {
           text: "Site"
         }
       ]}
+    />,
+    <Project key="page-3" className="page-grid"
+      imageUrl={citationGalaxies}
+      projectDesc={"CO.SHS Project | A web application to view, and markup, citations and their surrounding context"}
+      projectLinks={[
+        {
+          href: "https://github.com/vialab/Citation-Galaxies",
+          text: "Github"
+        },
+        {
+          href: "https://citation.vialab.ca/",
+          text: "Site"
+        }
+      ]}
+    />,
+    <Project key="page-4" className="page-grid"
+      imageUrl={svgPenSketch}
+      projectDesc={"An easy-to-use JavaScript library aimed at making it easier to draw on SVG elements"}
+      projectLinks={[
+        {
+          href: "https://github.com/Desousak/svg-pen-sketch",
+          text: "Github"
+        },
+        {
+          href: "https://www.npmjs.com/package/svg-pen-sketch",
+          text: "NPM"
+        }
+      ]}
     />
   ];
-
 
   return (
     <div id="app">

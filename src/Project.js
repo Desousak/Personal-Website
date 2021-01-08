@@ -7,10 +7,9 @@ export default class Project extends React.Component {
     }
 
     render() {
-        let links = [];
-        for (let linkParam of this.props.projectLinks) {
-            links.push(<li><a className="project-link" href={linkParam["href"]}>{linkParam["text"]}</a></li>)
-        }
+        let links = this.props.projectLinks.map((param, index) => {
+            return <li key={"project-link-"+index}><a className="project-link" href={param["href"]}>{param["text"]}</a></li>;
+        });
 
         return (
             <div className={"project " + this.props.className} >
