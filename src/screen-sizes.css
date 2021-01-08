@@ -19,6 +19,7 @@
 @media only screen and (max-width: 1180px){
     #links {
         margin-left: 0 !important;
+        justify-content: center;
     }
     #links a {
         margin: 1rem !important;
@@ -29,7 +30,10 @@
 }
 
 @media only screen and (max-width: 700px){
-    #name-card {
+    .page-grid {
         flex-wrap: wrap;
+    }
+    .page-grid > * {
+        margin: 1rem 0 !important;
     }
 }

@@ -1,20 +1,28 @@
-import React from 'react';
-import './Project.css';
+import React from "react";
+import "./Project.css";
 
-class Project extends React.Component {
-    constructor(props) {
+export default class Project extends React.Component {
+    constructor() {
         super();
     }
 
     render() {
+        let links = [];
+        for (let linkParam of this.props.projectLinks) {
+            links.push(<li><a className="project-link" href={linkParam["href"]}>{linkParam["text"]}</a></li>)
+        }
+
         return (
-            <div className="project">
-                <img className="project-banner" src={this.props.imageUrl}/>
-                <div className="project-desc">{this.props.projectDesc}</div>
-                {this.props.children}
+            <div className={"project " + this.props.className} >
+                <img src={this.props.imageUrl} className="project-img" />
+                <div className="project-text">
+                    {this.props.projectDesc}
+
+                    <ul className="project-links">
+                        {links}
+                    </ul>
+                </div>
             </div>
-        );
+        )
     }
 }
-
-export default Project;

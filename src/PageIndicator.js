@@ -16,7 +16,7 @@ class PageIndicator extends React.Component {
     render() {
         let pageIcons = [];
         for (let i = 0; i < this.props.amnt; i++) {
-            let className = i === this.state.activePage ? " , page-filled" : "";
+            let className = i === this.state.activePage ? " page-filled" : "";
             pageIcons.push(<a className={"page-val" + className} 
                             key={i} onClick={_ => this.props.carousel.scrollToPage(i)}></a>)
         }

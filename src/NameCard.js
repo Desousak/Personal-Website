@@ -6,7 +6,7 @@ import './NameCard.css';
 export default class NameCard extends React.Component {
     render() {
         return (
-            <div id="name-card">
+            <div id="name-card" className={this.props.className}>
                 <div id="personal-info">
                     <h1 id="name"><TypingText text="Kevin Desousa" delay={350} cursorDelay={1700} /></h1>
                     <p id="bio">
@@ -58,9 +58,8 @@ export default class NameCard extends React.Component {
                             <div className="anchor-circle" />
                         </a>
                     </li>
-                   
                 </ul>
-            </div>
+             </div>
         );
     }
 }

@@ -1,0 +1,19 @@
+.page-grid {
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.page-grid > * {
+    margin: 0 1rem;
+    flex-grow: 1;
+}
+
+.page-grid > *:first-child {
+    margin: 0 1rem 0 0;
+}
+
+.page-grid > *:last-child {
+    margin: 0 0 0 1rem;
+}
+

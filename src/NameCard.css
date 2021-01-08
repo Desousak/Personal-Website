@@ -1,15 +1,11 @@
-#name-card {
-    display: flex;
-    align-items: center;
-}
-
 #personal-info {
     max-width: 600px;
+    text-align: left;
 }
 
 #personal-info #name, 
 #personal-info #bio {
-    margin: .5rem 0 .5rem;
+    margin: 0;
 }
 
 #personal-info #name {
@@ -25,32 +21,30 @@
     -moz-letter-spacing: 0.005rem;
     -ms-letter-spacing: 0.005rem;
     letter-spacing: 0.005rem;
-    margin-bottom: 1rem;
 }
 
-#name-card #links {
-    padding: 0;
-    margin: 0 0 0 auto;
+#links {
     display: flex;
     flex-wrap: wrap;
     list-style-type: none;
-    justify-content: center;
+    justify-content: flex-end;
+    padding: 0;
 }
 
-#name-card #links li {
+#links li {
     margin-right: 1rem;
     --anchor-opacity: 0;
     --anchor-scale: 0.5;
     --icon-color: rgb(var(--foreground-color));
 }
 
-#name-card #links li:hover {
+#links li:hover {
     --anchor-opacity: 100;
     --anchor-scale: 1;
     --icon-color: rgb(var(--background-color));
 }
 
-#name-card #links a {
+#links a {
     display: flex;
     transition: all 0.25s ease-in-out;
     color: var(--icon-color);
@@ -60,7 +54,7 @@
     justify-content: center;
 }
 
-#name-card #links svg {
+#links svg {
     z-index: 100;
 }
 
