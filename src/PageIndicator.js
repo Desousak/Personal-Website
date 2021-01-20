@@ -14,16 +14,13 @@ class PageIndicator extends React.Component {
     }
 
     render() {
-        let pageIcons = [];
-        for (let i = 0; i < this.props.amnt; i++) {
-            let className = i === this.state.activePage ? " page-filled" : "";
-            pageIcons.push(<a className={"page-val" + className} 
-                            key={i} onClick={_ => this.props.carousel.scrollToPage(i)}></a>)
-        }
-
         return (
             <div id="page-indicators">
-                {pageIcons}
+                {
+                    [...Array(this.props.amnt)].map((e, i) =>
+                        <a className={"page-val" + (i === this.state.activePage ? " page-filled" : "")}
+                            key={i} onClick={_ => this.props.carousel.scrollToPage(i)}></a>)
+                }
             </div>
         );
     }
