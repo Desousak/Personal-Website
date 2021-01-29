@@ -1,0 +1,10 @@
+.img {
+    object-fit: contain;
+    filter: drop-shadow(0px 0px 1px rgba(var(--foreground-color), 0.3)) 
+            drop-shadow(0px 0px 10px rgba(var(--foreground-color), 0.3));
+}
+
+.lb-container {
+    top: auto !important;
+    /* pointer-events: all; */
+}

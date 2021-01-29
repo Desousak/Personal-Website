@@ -1,4 +1,6 @@
 import React from "react";
+import Image from "./Image.js";
+
 import "./Project.css";
 
 export default class Project extends React.Component {
@@ -9,7 +11,7 @@ export default class Project extends React.Component {
 
         return (
             <div className={"project " + this.props.className} >
-                <img src={this.props.imageUrl} alt="A screenshot of the project" className="project-img" />
+                <Image imageUrl={this.props.imageUrl} imgTitle={this.props.imgTitle} alt={"A screenshot of the project"} className={"project-img"}></Image>
                 <div className="project-text">
                     {this.props.projectDesc}
 

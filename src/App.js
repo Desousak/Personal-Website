@@ -32,6 +32,7 @@ function App() {
     <NameCard key="page-1" className="page-grid" />,
     <Project key="page-2" className="page-grid"
       imageUrl={eruditProject}
+      imgTitle={"Érudit Landing Page"}
       projectDesc={"The landing page for the various projects created as a part of the CO.SHS project"}
       projectLinks={[
         {
@@ -46,6 +47,7 @@ function App() {
     />,
     <Project key="page-3" className="page-grid"
       imageUrl={citationGalaxies}
+      imgTitle={"Citation Galaxies"}
       projectDesc={"CO.SHS Project | A web application to view, and markup, citations and their surrounding context"}
       projectLinks={[
         {
@@ -60,6 +62,7 @@ function App() {
     />,
     <Project key="page-4" className="page-grid"
       imageUrl={svgPenSketch}
+      imgTitle={"svgPenSketch"}
       projectDesc={"An easy-to-use JavaScript library aimed at making it easier to draw on SVG elements"}
       projectLinks={[
         {
